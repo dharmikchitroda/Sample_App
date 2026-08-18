@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="app_name">Sample_App</string>
+    <string name="welcome_user"> welcome </string>
+    <string name="task_dashboard">Task Dashboard</string>
+    <string name="student_registration">Student Registration</string>
+    <string name="check_now_viewbinding">Check now • ViewBinding</string>
+    <string name="check_now">Check Now</string>
+    <string name="login_amp_signup"><![CDATA[Login & Signup]]></string>
+    <string name="login_databinding">Login • DataBinding</string>
+    <string name="recyclerview">RecyclerView</string>
+    <string name="check_now_livedata">Check now • LiveData</string>
+    <string name="open_recyclerview">Open RecyclerView</string>
+    <string name="api_calling_retrofit">Api Calling - Retrofit</string>
+    <string name="registration_local_db">Registration • Local DB</string>
+    <string name="local_database">Local Database</string>
+    <string name="livedata">LiveData</string>
+    <string name="signup_post_api">Signup • POST API</string>
+    <string name="get_and_post_calling">Get and Post calling</string>
+    <string name="activity_lifecycle">Activity Lifecycle</string>
+    <string name="check_now_text">Check Now</string>
+    <string name="koltin_basic"><![CDATA[kotline :Variables & Data Types ,Conditions Loops ,Functions,Null Safety]]></string>
+    <string name="student_result_form">Student Result Form</string>
+    <string name="student_name">Student Name</string>
+    <string name="roll_number">Roll Number</string>
+    <string name="percentage">Percentage</string>
+    <string name="passed">Passed</string>
+    <string name="attendance">Attendance (%)</string>
+    <string name="email_optional">Email (Optional)</string>
+    <string name="mobile_optional">Mobile (Optional)</string>
+
+</resources>
