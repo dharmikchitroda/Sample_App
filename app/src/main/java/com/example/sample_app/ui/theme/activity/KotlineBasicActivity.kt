@@ -79,5 +79,9 @@ class KotlineBasicActivity : ComponentActivity() {
             val intent = Intent(this , CalculatorActivity::class.java)
             startActivity(intent)
         }
+        binding.btnCollection.setOnClickListener {
+            val intent = Intent(this , CollectionActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

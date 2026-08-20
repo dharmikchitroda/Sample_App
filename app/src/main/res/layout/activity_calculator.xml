@@ -16,7 +16,7 @@
         android:layout_marginEnd="128dp"
         android:text="calculator"
         android:textColor="#0D0D0D"
-        android:textSize="34sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,7 +74,7 @@
         android:layout_marginEnd="100dp"
         android:ems="10"
         android:hint="enter num 1"
-        android:inputType="text"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvcalculator" />
 
@@ -85,8 +85,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="101dp"
         android:ems="10"
-        android:inputType="text"
         android:hint="enter num 2"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 

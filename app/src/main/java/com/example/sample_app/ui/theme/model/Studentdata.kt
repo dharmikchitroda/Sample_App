@@ -6,6 +6,13 @@ data class Studentdata(
     var name: String,
     var email: String,
     var mobile: String
+
+)
+data class Studentdata2(
+    var name: String,
+    var email: String,
+    var mobile: String ,
+    var mark: Int
 )
 
 

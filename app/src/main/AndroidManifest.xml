@@ -16,7 +16,8 @@
         android:theme="@style/Theme.Sample_App">
         <activity
             android:name=".ui.theme.activity.CollectionActivity"
-            android:exported="false" />
+            android:exported="false"
+            />
         <activity
             android:name=".ui.theme.activity.CalculatorActivity"
             android:exported="false" />
@@ -26,6 +27,7 @@
         <activity
             android:name=".ui.theme.activity.LifeCycleActivity"
             android:exported="false" />
+
         <activity
             android:name=".ui.theme.activity.ApiOptbtnActivity"
             android:exported="false" />
@@ -34,7 +36,19 @@
             android:exported="false" />
         <activity
             android:name=".ui.theme.activity.recyleviewActivity"
-            android:exported="false" />
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="myapp"
+                    android:host="profile" />
+            </intent-filter>
+
+        </activity>
         <activity
             android:name=".ui.theme.activity.livedataActivity"
             android:exported="false" />

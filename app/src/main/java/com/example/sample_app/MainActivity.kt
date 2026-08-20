@@ -14,8 +14,13 @@ import com.example.sample_app.ui.theme.activity.signupActivity
 import com.example.sample_app.ui.theme.activity.regitartionScreenActivity
 import com.example.sample_app.ui.theme.task2
 
+// oop used here - made a class
+// oop used here -  inherit all activity extend must be ComponentActivity()/AppCompatActivity()
+
 class MainActivity : ComponentActivity() {
 
+
+// oop used here : inheritance all inbult binding class is a interface beacuase not constructor here
 lateinit var binding : ActivityMainBinding
 
 
