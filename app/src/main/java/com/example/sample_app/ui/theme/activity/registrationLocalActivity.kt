@@ -1,19 +1,21 @@
 package com.example.sample_app.ui.theme.activity
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import androidx.activity.viewModels
 import com.example.sample_app.databinding.ActivityRegistrationLocalBinding
 import com.example.sample_app.ui.theme.LocalData.Room.MyEntity
 import com.example.sample_app.ui.theme.LocalData.Sqlitehelper
-import com.example.sample_app.ui.theme.reposetry.StudentRepository
 import com.example.sample_app.ui.theme.viewmodels.RoomVIewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class registrationLocalActivity : ComponentActivity() {
 
-    lateinit var binding: ActivityRegistrationLocalBinding
+    private lateinit var binding: ActivityRegistrationLocalBinding
+    private val viewmodel: RoomVIewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,12 +23,6 @@ class registrationLocalActivity : ComponentActivity() {
         binding = ActivityRegistrationLocalBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val repository = StudentRepository(applicationContext)
-
-        val viewmodel = RoomVIewModel(repository)
-        viewmodel.also {
-            this
-        }
 
 
 
@@ -60,7 +56,7 @@ class registrationLocalActivity : ComponentActivity() {
 
             } else {
 
-                val savdone = Sqlitehelper(this).insert(name, email)
+                val savdone = Sqlitehelper(this).insert(name, email, mobile, address)
 
                 binding.etName.text?.clear()
                 binding.etEmail.text?.clear()

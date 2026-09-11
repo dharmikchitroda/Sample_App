@@ -8,6 +8,8 @@ import com.example.sample_app.ui.theme.`interface`.cardclickinterface
 import com.example.sample_app.ui.theme.model.response.User
 
 
+import com.example.sample_app.ui.theme.model.Studentdata
+
 class adapter(
     private var dataset: List<User>,
     var listner: cardclickinterface
@@ -31,6 +33,16 @@ class adapter(
         holder.binding.tvName.text = currentstudentdata.Name
         holder.binding.tvEmail.text = currentstudentdata.email
         holder.binding.tvPhone.text = currentstudentdata.mobile
+
+        holder.binding.root.setOnClickListener {
+            listner.onStudentClick(
+                Studentdata(
+                    name = currentstudentdata.Name,
+                    email = currentstudentdata.email,
+                    mobile = currentstudentdata.mobile
+                )
+            )
+        }
     }
 
     override fun getItemCount(): Int {

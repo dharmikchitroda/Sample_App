@@ -46,9 +46,12 @@ class CalculatorActivity : ComponentActivity() {
             val a = binding.editTextText.text.toString().toDoubleOrNull() ?: 0.0
             val b = binding.editTextText2.text.toString().toDoubleOrNull() ?: 0.0
 
-            val Result = division(a, b)
-
-            binding.tvresult.text = Result.toString()
+            if (b == 0.0) {
+                binding.tvresult.text = "Cannot divide by zero"
+            } else {
+                val Result = division(a, b)
+                binding.tvresult.text = Result.toString()
+            }
         }
 
     }
@@ -63,6 +66,7 @@ class CalculatorActivity : ComponentActivity() {
         return a * b
     }
     fun division(a: Double, b: Double): Double {
+        if (b == 0.0) return 0.0
         return a / b
     }
 }

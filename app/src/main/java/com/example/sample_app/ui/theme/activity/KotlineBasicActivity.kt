@@ -52,7 +52,7 @@ class KotlineBasicActivity : ComponentActivity() {
 
             var table = ""
 
-            for (i in 1 until 10) {
+            for (i in 1..10) {
 
                 table += " $count * $i = ${count * i} \n"
 

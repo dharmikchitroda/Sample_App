@@ -1,14 +1,14 @@
-    package com.example.sample_app.ui.theme.reposetry
+package com.example.sample_app.ui.theme.reposetry
 
-    import android.content.Context
-    import com.example.sample_app.ui.theme.LocalData.Room.AppDatabase
-    import com.example.sample_app.ui.theme.LocalData.Room.MyEntity
+import com.example.sample_app.ui.theme.LocalData.Room.MyDao
+import com.example.sample_app.ui.theme.LocalData.Room.MyEntity
+import javax.inject.Inject
 
-    class StudentRepository(context: Context) {
+class StudentRepository @Inject constructor(
+    private val dao: MyDao
+) {
 
-        private val dao = AppDatabase.getdata(context).dao()
-
-        suspend fun insert(student: MyEntity) {
-            dao.insert(student)
-        }
+    suspend fun insert(student: MyEntity) {
+        dao.insert(student)
     }
+}
