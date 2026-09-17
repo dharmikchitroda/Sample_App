@@ -12,6 +12,7 @@ class ApiOptbtnActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+       // oop used here : use the object method inflate and their passed prm in constructer
         binding = ActivityApiOptbtnBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

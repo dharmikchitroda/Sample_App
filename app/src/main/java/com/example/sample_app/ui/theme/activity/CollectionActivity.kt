@@ -7,7 +7,9 @@ import com.example.sample_app.databinding.ActivityCollectionBinding
 import com.example.sample_app.ui.theme.model.Studentdata2
 
 class CollectionActivity : ComponentActivity() {
+
     lateinit var binding: ActivityCollectionBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -30,6 +32,12 @@ class CollectionActivity : ComponentActivity() {
             Studentdata2("yash", "yash@gmail.com", "99881234", 100)
         )
 
+        var abs = Studentdata2("dharmik", "dharmik@gmail.com", "98989898", 10)
+        var abs2 = Studentdata2("dharmik", "dharmik@gmail.com", "98989898", 10)
+
+        var dataclass =  abs.abc
+
+        binding.tvResult.text = dataclass.toString()
 
 
 //        val result = studentslist.filter { it.mark > 70 }.sortedByDescending { it.mark }.map {  it.name to it.mark }
@@ -54,11 +62,14 @@ class CollectionActivity : ComponentActivity() {
         /*  Task 4: Student Ranking System	*/
         val pass = studentslist.filter { it.mark >= 35 }.map { it.name }
         val fail = studentslist.filter { it.mark < 35 }.map { it.name }
-        val rank = studentslist.filter { it.mark > 35 }.sortedByDescending { it.mark }.map { it.name to it.mark }
-        val lowtohigh  = studentslist.sortedBy { it.mark } .map { it.name to it.mark }
-        binding.tvResult.text = lowtohigh.toString()
+        val rank = studentslist.filter { it.mark > 35 }.sortedByDescending { it.mark }
+            .map { it.name to it.mark }
+        val lowtohigh = studentslist.sortedBy { it.mark }.map { it.name to it.mark }
+
+//        binding.tvResult.text = lowtohigh.toString()
 
     }
+
     /* Task 1: Student Data Analysis	*/
     private fun studentAnalysis(students: List<Studentdata2>) {
         val result = students
@@ -66,7 +77,11 @@ class CollectionActivity : ComponentActivity() {
             .sortedByDescending { it.mark }
             .map { it.name to it.mark }
 
-        binding.tvResult.text = result.toString()
+//        binding.tvResult.text = result.toString()
+
+
+
     }
+
 }
 

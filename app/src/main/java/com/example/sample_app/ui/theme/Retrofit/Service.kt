@@ -1,5 +1,6 @@
 package com.example.sample_app.ui.theme.Retrofit
 
+import com.example.sample_app.ui.theme.model.CharacterResponse
 import com.example.sample_app.ui.theme.model.request.LoginRequestdata
 import com.example.sample_app.ui.theme.model.response.LoginResponse
 import com.example.sample_app.ui.theme.model.response.SeverStudentdata
@@ -12,7 +13,7 @@ interface ApiService {
     suspend fun getAllStudent(): SeverStudentdata
 
     @POST("user/login")
-    suspend fun login( @Body request: LoginRequestdata): LoginResponse
+    suspend fun login(@Body request: LoginRequestdata): LoginResponse
 
 
 }

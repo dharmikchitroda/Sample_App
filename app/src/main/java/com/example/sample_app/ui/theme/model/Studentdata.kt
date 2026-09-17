@@ -13,6 +13,8 @@ data class Studentdata2(
     var email: String,
     var mobile: String ,
     var mark: Int
-)
+){
+    val abc = "d"
+}
 
-
+    

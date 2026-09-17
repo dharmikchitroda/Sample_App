@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
 
     <application
         android:name=".MyApplication"
@@ -15,9 +21,46 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sample_App">
         <activity
-            android:name=".ui.theme.activity.CollectionActivity"
+            android:name=".ui.theme.activity.BroadCastActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.theme.activity.MusicActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".ui.theme.Services.MusicService"
             android:exported="false"
-            />
+            android:foregroundServiceType="mediaPlayback" />
+        <service
+            android:name=".ui.theme.Services.LocationService"
+            android:exported="false"
+            android:foregroundServiceType="location" />
+        <service
+            android:name=".ui.theme.Services.NewService"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.theme.activity.LocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.theme.activity.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.theme.activity.ServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.theme.activity.miniAppActivites.CommonUiActivity"
+            android:exported="true" />
+        <activity android:name=".ui.theme.activity.miniAppActivites.LoginInActivity" />
+        <activity
+            android:name=".ui.theme.activity.miniAppActivites.SingUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.theme.activity.CoroutinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.theme.activity.CollectionActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.theme.activity.CalculatorActivity"
             android:exported="false" />
@@ -27,7 +70,6 @@
         <activity
             android:name=".ui.theme.activity.LifeCycleActivity"
             android:exported="false" />
-
         <activity
             android:name=".ui.theme.activity.ApiOptbtnActivity"
             android:exported="false" />
@@ -37,17 +79,16 @@
         <activity
             android:name=".ui.theme.activity.recyleviewActivity"
             android:exported="true">
-
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="myapp"
-                    android:host="profile" />
+                <data
+                    android:host="profile"
+                    android:scheme="myapp" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".ui.theme.activity.livedataActivity"
@@ -56,13 +97,13 @@
             android:name=".ui.theme.activity.signupActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.theme.task2"
+            android:name=".ui.theme.activity.task2"
             android:exported="false" />
         <activity
             android:name=".ui.theme.activity.regitartionScreenActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.theme.activity_infostudent"
+            android:name=".ui.theme.activity.infostudentActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

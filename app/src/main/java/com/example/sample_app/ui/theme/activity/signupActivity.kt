@@ -7,6 +7,7 @@ import androidx.activity.viewModels
 import com.example.sample_app.databinding.ActivitySignupBinding
 import com.example.sample_app.ui.theme.model.request.LoginRequestdata
 import com.example.sample_app.ui.theme.reposetry.repoRetrofit
+import com.example.sample_app.ui.theme.viewmodels.MiniAppViewmodel
 import com.example.sample_app.ui.theme.viewmodels.RetrofitViewModel
 import dagger.hilt.android.AndroidEntryPoint
 

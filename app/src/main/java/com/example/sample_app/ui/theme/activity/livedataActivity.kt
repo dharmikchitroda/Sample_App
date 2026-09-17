@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import com.example.sample_app.databinding.ActivityLivadataBinding
 import com.example.sample_app.ui.theme.viewmodels.CounterViewModel
 
-class livedataActivity : ComponentActivity() {
+class   livedataActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

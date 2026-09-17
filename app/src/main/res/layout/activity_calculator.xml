@@ -5,101 +5,116 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="24dp"
     tools:context=".ui.theme.activity.CalculatorActivity">
 
+    <!-- Title Header -->
     <TextView
         android:id="@+id/tvcalculator"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="83dp"
-        android:layout_marginEnd="128dp"
-        android:text="calculator"
+        android:layout_marginTop="32dp"
+        android:text="Calculator"
         android:textColor="#0D0D0D"
-        android:textSize="24sp"
+        android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- First Input Number -->
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:minHeight="48dp"
+        android:hint="Enter first number"
+        android:inputType="numberDecimal|numberSigned"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvcalculator" />
+
+    <!-- Second Input Number -->
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:minHeight="48dp"
+        android:hint="Enter second number"
+        android:inputType="numberDecimal|numberSigned"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+    <!-- Operation Buttons Row 1 -->
     <Button
         android:id="@+id/btnsum"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
         android:text="+"
-        android:textSize="30sp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnminus"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
 
     <Button
         android:id="@+id/btnminus"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
         android:text="-"
-        android:textSize="30sp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnsum"
         app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
 
+    <!-- Operation Buttons Row 2 -->
     <Button
         android:id="@+id/btnmul"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="24dp"
-        android:text="x"
-        android:textSize="30sp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:text="×"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/btndiv"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnsum" />
 
     <Button
         android:id="@+id/btndiv"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="24dp"
-        android:text="/"
-        android:textSize="30sp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="12dp"
+        android:text="÷"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnmul"
         app:layout_constraintTop_toBottomOf="@+id/btnminus" />
 
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="100dp"
-        android:ems="10"
-        android:hint="enter num 1"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvcalculator" />
-
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="101dp"
-        android:ems="10"
-        android:hint="enter num 2"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
-
+    <!-- Result Display -->
     <TextView
         android:id="@+id/tvresult"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="336dp"
-        android:textSize="30sp"
+        android:layout_marginTop="32dp"
+        android:text="Result: -"
+        android:textAlignment="center"
+        android:textColor="#1E293B"
+        android:textSize="22sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@+id/btnmul" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

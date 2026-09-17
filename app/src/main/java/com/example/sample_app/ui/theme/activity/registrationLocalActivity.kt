@@ -23,9 +23,6 @@ class registrationLocalActivity : ComponentActivity() {
         binding = ActivityRegistrationLocalBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
-
         binding.btnSQLite.setOnClickListener {
 
             val name = binding.etName.text.toString().trim()
@@ -146,6 +143,3 @@ class registrationLocalActivity : ComponentActivity() {
 
     }
 }
-
-
-

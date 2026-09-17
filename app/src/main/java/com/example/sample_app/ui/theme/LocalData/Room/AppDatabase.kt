@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-
+// oop used here : abstract class creat that both contain class abstract/ non-abstract propertis & abstract easily can any other class
 @Database(entities = [MyEntity::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 

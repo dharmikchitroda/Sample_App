@@ -1,11 +1,12 @@
-package com.example.sample_app.ui.theme
+package com.example.sample_app.ui.theme.activity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import com.example.sample_app.databinding.ActivityInfoBinding
 import com.example.sample_app.ui.theme.utils.IntentKeys
 
-class activity_infostudent : ComponentActivity() {
+
+class infostudentActivity : ComponentActivity() {
 
     private lateinit var binding: ActivityInfoBinding
 

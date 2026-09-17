@@ -4,6 +4,8 @@
         alias(libs.plugins.kotlin.android)
         id("com.google.devtools.ksp")
         id("com.google.dagger.hilt.android")
+
+        //
     }
 
     android {
@@ -74,4 +76,17 @@
         // Hilt
         implementation("com.google.dagger:hilt-android:2.51.1")
         ksp("com.google.dagger:hilt-compiler:2.51.1")
+
+        // intuit
+        implementation("com.intuit.sdp:sdp-android:1.1.1")
+        implementation("com.intuit.ssp:ssp-android:1.1.1")
+
+        // fragment
+        implementation("androidx.fragment:fragment-ktx:1.7.1")
+
+        // image loader glide
+        implementation("com.github.bumptech.glide:glide:4.16.0")
+
+        //   Location API
+        implementation("com.google.android.gms:play-services-location:21.3.0")
     }

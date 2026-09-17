@@ -10,19 +10,28 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
- object RetrofitModule {
+object RetrofitModule {
 
     private var BASE_URL = "https://dummyjson.com/"
 
     @Provides
     @Singleton
     fun provideRetrofit(): ApiService {
-        return Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
+
+        return Retrofit.Builder().baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create()).build()
             .create(ApiService::class.java)
     }
 
+    private val BASE_URL_2 = "https://rickandmortyapi.com/api/"
 
+    @Provides
+    @Singleton
+    fun provideRetrofit2(): CharactersService {
+        return Retrofit.Builder()
+            .baseUrl(BASE_URL_2)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(CharactersService::class.java)
+    }
 }

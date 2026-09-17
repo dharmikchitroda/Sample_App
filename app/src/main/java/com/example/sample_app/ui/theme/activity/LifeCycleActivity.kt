@@ -16,7 +16,7 @@ class LifeCycleActivity : AppCompatActivity() {
         binding = ActivityLifeCycleBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
-
+// oop used here :override parent method call and modify that signature according my needs
     override fun onStart() {
         super.onStart()
         Log.d("act_lifecycle", " call the onStart Method ")

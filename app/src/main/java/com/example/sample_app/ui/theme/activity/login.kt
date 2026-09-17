@@ -1,8 +1,7 @@
-package com.example.sample_app.ui.theme
+package com.example.sample_app.ui.theme.activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import com.example.sample_app.MainActivity
 import com.example.sample_app.databinding.ActivityTask2Binding
@@ -14,6 +13,7 @@ class task2 : ComponentActivity() {
     lateinit var binding: ActivityTask2Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
 
         binding = ActivityTask2Binding.inflate(layoutInflater)

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,88 +15,102 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="16dp"
             android:text="@string/student_result_form"
-            android:textSize="24sp"
+            android:textColor="#000000"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:hint="@string/student_name"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:padding="12dp" />
 
         <EditText
             android:id="@+id/etPercentage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:minHeight="48dp"
             android:hint="@string/percentage"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:padding="12dp" />
 
         <Button
             android:id="@+id/btnSubmit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:text="Submit Result" />
 
         <TextView
             android:id="@+id/result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="10dp"
+            android:layout_marginTop="12dp"
+            android:padding="8dp"
             android:text=""
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnmovecalcu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text=" open calculatore " />
+            android:layout_marginTop="16dp"
+            android:text="Open Calculator" />
 
         <!-- Multiplication Table Section -->
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
             android:text="Print Tables"
-            android:textSize="24sp"
+            android:textColor="#000000"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/ettables"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:hint="Enter the table number"
-            android:inputType="number" />
+            android:inputType="number"
+            android:padding="12dp" />
 
         <Button
             android:id="@+id/btntable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:text="Print Table" />
 
         <TextView
             android:id="@+id/table"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginTop="12dp"
+            android:padding="8dp"
             android:text=""
-            android:textSize="20sp" />
+            android:textAlignment="center"
+            android:textColor="#333333"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnCollection"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="kotline Collection" />
+            android:text="Kotlin Collection" />
 
     </LinearLayout>
 
