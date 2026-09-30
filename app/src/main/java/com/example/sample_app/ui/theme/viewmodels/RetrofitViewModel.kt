@@ -4,18 +4,16 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.map
 import androidx.lifecycle.viewModelScope
 import com.example.sample_app.ui.theme.model.request.LoginRequestdata
 import com.example.sample_app.ui.theme.model.response.LoginResponse
-import com.example.sample_app.ui.theme.model.response.User
-import com.example.sample_app.ui.theme.reposetry.repoRetrofit
+import com.example.sample_app.ui.theme.reposetry.repoMiniapp
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class RetrofitViewModel @Inject constructor(val repository: repoRetrofit ) : ViewModel() {
+class RetrofitViewModel @Inject constructor(val repository: repoMiniapp ) : ViewModel() {
 
     private val _loginResponse = MutableLiveData<LoginResponse>()
     val loginResponse: LiveData<LoginResponse> = _loginResponse

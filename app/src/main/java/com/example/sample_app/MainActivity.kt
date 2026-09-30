@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import com.example.sample_app.databinding.ActivityMainBinding
 import com.example.sample_app.ui.theme.activity.ApiOptbtnActivity
 import com.example.sample_app.ui.theme.activity.BroadCastActivity
+import com.example.sample_app.ui.theme.activity.CameraActivity
 import com.example.sample_app.ui.theme.activity.CoroutinActivity
 import com.example.sample_app.ui.theme.activity.KotlineBasicActivity
 import com.example.sample_app.ui.theme.activity.LifeCycleActivity
@@ -13,6 +14,7 @@ import com.example.sample_app.ui.theme.activity.LocationActivity
 import com.example.sample_app.ui.theme.activity.MusicActivity
 import com.example.sample_app.ui.theme.activity.NotificationActivity
 import com.example.sample_app.ui.theme.activity.ServiceActivity
+import com.example.sample_app.ui.theme.activity.WorkManagerActivity
 import com.example.sample_app.ui.theme.activity.livedataActivity
 import com.example.sample_app.ui.theme.activity.miniAppActivites.SingUpActivity
 import com.example.sample_app.ui.theme.activity.recyleviewActivity
@@ -113,12 +115,21 @@ class MainActivity : ComponentActivity() {
             val intent = Intent(this, MusicActivity::class.java)
             startActivity(intent)
         }
-        binding.BroadcastReciever.setOnClickListener {
+        binding.btnBroadcastReciever.setOnClickListener {
             val intent = Intent(this, BroadCastActivity::class.java)
             startActivity(intent)
         }
-
+        binding.btnCamera.setOnClickListener {
+            val intent = Intent(this, CameraActivity::class.java)
+            Intent()
+            startActivity(intent)
+        }
+        binding.btnWorkManager.setOnClickListener {
+            val intent = Intent(this, WorkManagerActivity::class.java)
+            Intent()
+            startActivity(intent)
+        }
     }
-
+/*  */
 
 }

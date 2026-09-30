@@ -1,6 +1,7 @@
 package com.example.sample_app.ui.theme.activity
 
 import android.os.Bundle
+import android.os.Looper
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sample_app.databinding.ActivityLifeCycleBinding
@@ -10,15 +11,17 @@ class LifeCycleActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLifeCycleBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         Log.d("act_lifecycle", " call the onCreate Method ")
 
         binding = ActivityLifeCycleBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
+
 // oop used here :override parent method call and modify that signature according my needs
     override fun onStart() {
-        super.onStart()
+                super.onStart()
         Log.d("act_lifecycle", " call the onStart Method ")
     }
 

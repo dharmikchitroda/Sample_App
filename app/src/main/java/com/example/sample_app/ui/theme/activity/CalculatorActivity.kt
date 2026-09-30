@@ -68,7 +68,6 @@ class CalculatorActivity : ComponentActivity() {
     }
 
     fun division(a: Double, b: Double): Double {
-        if (b == 0.0) return 0.0
         return a / b
     }
 }

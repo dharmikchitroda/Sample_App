@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.sample_app.ui.theme.model.response.User
-import com.example.sample_app.ui.theme.reposetry.repoRetrofit
+import com.example.sample_app.ui.theme.reposetry.repoMiniapp
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class RecylerViewViewModel @Inject constructor(private val repository: repoRetrofit) : ViewModel() {
+class RecylerViewViewModel @Inject constructor(private val repository: repoMiniapp) : ViewModel() {
 
 
     private val _uiState = MutableStateFlow<ApiResult>(ApiResult.Loading)

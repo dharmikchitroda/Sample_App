@@ -14,6 +14,7 @@ import android.util.Log
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.example.sample_app.R
 import com.example.sample_app.databinding.ActivityLocationBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
@@ -21,6 +22,12 @@ import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority
+import com.google.android.gms.maps.CameraUpdate
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 import java.util.Date
 import java.util.Locale
 
@@ -29,7 +36,7 @@ class LocationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLocationBinding
     private lateinit var locationCallback: LocationCallback
     private lateinit var fusedlocationClient: FusedLocationProviderClient
-
+    private lateinit var googleMap: GoogleMap
 
     @SuppressLint("MissingPermission")
     private fun getCurrentLocation() {
@@ -45,27 +52,35 @@ class LocationActivity : AppCompatActivity() {
 
                 val location = result.lastLocation
 
-                if (location != null) {
+                val latitude = location?.latitude.toString()
+                val longitude = location?.longitude.toString()
 
-                    var latitude = location.latitude.toString()
-                    var longitude = location.longitude.toString()
+                binding.tvLatitude.text = latitude
+                binding.tvLongitude.text = longitude
 
+                val geocoder = Geocoder(this@LocationActivity, Locale.getDefault())
 
-                    binding.tvLatitude.text = latitude
+                val address = geocoder.getFromLocation(latitude.toDouble(), longitude.toDouble(), 1)
+                    ?.firstOrNull()
 
-                    binding.tvLongitude.text = longitude
+                binding.tvLocation.text =    "${address?.locality}, ${address?.adminArea} ,${address?.countryName}"
 
-                    val geocoder = Geocoder(this@LocationActivity, Locale.getDefault())
+                // Google Map
+                val currentlocation = LatLng(latitude.toDouble(),longitude.toDouble())
 
-                    val address =
-                        geocoder.getFromLocation(latitude.toDouble(), longitude.toDouble(), 1)
-                            ?.firstOrNull()
+//                googleMap.clear()
+                googleMap.addMarker(
+                    MarkerOptions()
+                        .position(currentlocation)
+                        .title("My Location")
 
-                    binding.tvLocation.text =
-                        "${address?.locality}, ${address?.adminArea} ,${address?.countryName}"
-
-                }
-
+                )
+                googleMap.animateCamera(
+                    CameraUpdateFactory.newLatLngZoom(
+                        currentlocation,
+                        15f
+                    )
+                )
 
             }
         }
@@ -155,11 +170,19 @@ class LocationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLocationBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        setupMap()
         fusedlocationClient = LocationServices.getFusedLocationProviderClient(this)
 
         checkLocationPermission()
 
+    }
+
+    private fun setupMap() {
+
+        val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
+        mapFragment.getMapAsync { map ->
+            googleMap = map
+        }
     }
 
     override fun onStop() {

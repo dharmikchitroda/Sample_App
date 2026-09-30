@@ -23,15 +23,14 @@
             android:id="@+id/profileImageCard"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            app:cardBackgroundColor="@color/purple_200"
             app:cardCornerRadius="50dp">
 
             <ImageView
-                android:id="@+id/ivProfile"
+                android:id="@+id/ivProfileImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/images"
+                android:src="@drawable/userimg"
                 android:contentDescription="Profile picture" />
 
         </androidx.cardview.widget.CardView>
@@ -68,14 +67,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="ABCDXTYZZZ &amp; welcome to the my world."
+        android:text="this is my bio &amp; welcome to the my world."
         android:textColor="#44474E"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvProfileName" />
 
-    <!-- Stats -->
     <LinearLayout
         android:id="@+id/statsContainer"
         android:layout_width="wrap_content"
@@ -87,7 +85,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvProfileBio">
 
-        <!-- Followers -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -114,7 +111,6 @@
 
         </LinearLayout>
 
-        <!-- Following -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -141,10 +137,8 @@
                 android:textSize="12sp" />
 
         </LinearLayout>
-
     </LinearLayout>
 
-    <!-- Edit Profile Button -->
     <Button
         android:id="@+id/btnEditProfile"
         android:layout_width="0dp"
