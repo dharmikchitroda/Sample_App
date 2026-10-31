@@ -2,53 +2,63 @@
 
 A hands-on Android application built with Kotlin and XML to learn and implement essential Android development concepts through practical examples.
 
-This project documents my learning journey, covering Android architecture, local data storage, networking, background processing, camera integration, and UI development.
+This project focuses on understanding Android components, implementing core features, and improving my practical Android development skills.
 
 ## What I Learned and Implemented
 
-### 1. Android Architecture and Dependency Injection
+### 1. UI Development and Navigation
+- Built Android screens using XML layouts and ViewBinding/DataBinding.
+- Implemented Fragments and Bottom Navigation for multi-screen navigation.
+- Created RecyclerView lists and grids using custom adapters.
+- Practiced deep linking using custom URI schemes.
+
+### 2. Android Architecture and Dependency Injection
 - Implemented MVVM architecture using ViewModel and LiveData.
 - Used the Repository pattern to separate data access from UI logic.
-- Integrated Dagger Hilt for dependency injection using `@HiltAndroidApp`, `@AndroidEntryPoint`, and `@HiltViewModel`.
+- Integrated Hilt for dependency injection.
 
-### 2. Kotlin Coroutines
+### 3. Kotlin Coroutines
 - Practiced asynchronous programming using Kotlin Coroutines.
 - Used `viewModelScope` to manage coroutine lifecycles.
-- Learned to use `Dispatchers.IO`, `Dispatchers.Main`, and `Dispatchers.Default`.
+- Worked with `Dispatchers.IO`, `Dispatchers.Main`, and `Dispatchers.Default`.
 - Practiced concurrent operations using `async` and `await`.
 
-### 3. Local Data Storage
-- Implemented database operations using Room, including Entities, DAOs, and TypeConverters.
-- Practiced CRUD operations using SQLite and `SQLiteOpenHelper`.
+### 4. Local Data Storage
+- Implemented CRUD operations using Room Database.
+- Practiced database operations using SQLite and `SQLiteOpenHelper`.
+- Used both Room and SQLiteOpenHelper to store and manage local data.
 - Used SharedPreferences to store app preferences and theme settings.
 
-### 4. Networking and API Integration
+### 5. Networking and API Integration
 - Integrated REST APIs using Retrofit and OkHttp.
 - Parsed JSON responses using Gson.
-- Learned how to structure API services and handle network operations.
+- Practiced API service implementation and network operations.
 
-### 5. Background Processing and Android Services
+### 6. Background Processing and Android Services
 - Implemented WorkManager for scheduled and deferred background tasks.
 - Practiced foreground services for background audio playback and location tracking.
 - Learned how Android Services manage background operations.
 - Implemented BroadcastReceivers to handle system events and custom broadcasts.
-- Worked with notifications and notification channels.
 
-### 6. Camera and Media
+### 7. Notifications
+- Implemented notifications using NotificationManager.
+- Created and configured notification channels.
+- Practiced displaying notifications for background operations and service updates.
+
+### 8. Camera and Media
 - Implemented camera functionality using CameraX and camera intents.
 - Used FileProvider for secure image sharing.
 - Practiced image processing and handling using utility functions.
 
-### 7. UI Development and Navigation
-- Built Android screens using XML layouts and ViewBinding/DataBinding.
-- Implemented Fragments and Bottom Navigation.
-- Created RecyclerView lists and grids using custom adapters.
-- Practiced deep linking using custom URI schemes.
+### 9. Location and Google Maps
+- Implemented GPS location tracking using Google Play Services Location.
+- Practiced accessing the device's current location.
+- Integrated Google Maps to display location information.
 
-### 8. Android Permissions and Validation
+### 10. Android Permissions and Validation
 - Implemented runtime permissions for camera, location, and notifications.
-- Worked with notification channels.
 - Practiced form validation using Android Patterns.
+- Worked with Android notification channels and permission handling.
 
 ## Technologies Used
 
@@ -57,13 +67,14 @@ This project documents my learning journey, covering Android architecture, local
 | Language | Kotlin |
 | UI | XML, ViewBinding, DataBinding |
 | Architecture | MVVM, Repository Pattern |
-| Dependency Injection | Dagger Hilt |
+| Dependency Injection | Hilt |
 | Asynchronous Programming | Kotlin Coroutines |
-| Local Storage | Room, SQLite, SharedPreferences |
+| Local Storage | Room, SQLite, SQLiteOpenHelper, SharedPreferences |
 | Networking | Retrofit, OkHttp, Gson |
 | Background Processing | WorkManager, Android Services |
+| Notifications | NotificationManager, Notification Channels |
 | Camera and Media | CameraX, FileProvider, Glide |
-| Location | Google Play Services Location |
+| Location and Maps | GPS, Google Play Services Location, Google Maps |
 | Navigation | Activities, Fragments, Bottom Navigation, Deep Links |
 
 ## Getting Started
